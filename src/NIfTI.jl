@@ -379,7 +379,7 @@ end
 esize(ex::NIfTI1Extension) = 8 + ceil(Int, length(ex.edata)/16)*16
 
 # Validates the header of a volume and updates it to match the volume's contents
-function niupdate(vol::NIVolume{T})
+function niupdate(vol::NIVolume)
     vol.header.sizeof_hdr = SIZEOF_HDR
     vol.header.dim = nidim(vol.raw)
     t = eltype(vol.raw)
