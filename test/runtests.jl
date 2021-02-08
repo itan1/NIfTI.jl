@@ -51,6 +51,7 @@ vol = NIVolume()
 niwrite(TEMP_FILE, vol)
 niread(TEMP_FILE)
 
+
 const TEMP_GZIPPED_FILE = joinpath(TEMP_DIR_NAME, "$(tempname()).nii.gz")
 niwrite(TEMP_GZIPPED_FILE, vol)
 niread(TEMP_GZIPPED_FILE)
